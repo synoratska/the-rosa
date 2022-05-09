@@ -244,11 +244,11 @@ header {
   background-color: #fff;
   padding: 0.9rem 1.8rem;
   color: var(--body-font-color);
-  border-radius: .4rem;
+  border-radius: 0.4rem;
   transition: background-color 0.5s;
 }
 
-.cta-btn:hover, 
+.cta-btn:hover,
 .cta-btn:focus {
   color: #fff;
   background-color: var(--secondary-font-color);
@@ -272,13 +272,13 @@ header {
 
 .headline-dark {
   color: var(--main-font-color-dark);
-  letter-spacing: .7rem;
+  letter-spacing: 0.7rem;
   margin-right: -0.7rem;
 }
 
 .global-headline .sub-headline {
   letter-spacing: -1px;
-  line-height: .42;
+  line-height: 0.42;
 }
 
 .restaurant-info {
@@ -298,21 +298,22 @@ header {
   font-size: 1.5rem;
   color: var(--secondary-font-color);
   position: relative;
-  transition: color .5s;
+  transition: color 0.5s;
 }
 
 .body-btn::before {
-  content: '';
+  content: "";
   position: absolute;
   left: 0;
   bottom: -3px;
   width: 100%;
   height: 2px;
   background-color: var(--secondary-font-color);
-  transition: background-color .5s;
+  transition: background-color 0.5s;
 }
 
-.body-btn:hover, .body-btn:focus {
+.body-btn:hover,
+.body-btn:focus {
   color: var(--main-font-color-dark);
 }
 
@@ -324,7 +325,7 @@ header {
 /*                    Tasteful Recipes                    */
 
 .tasteful-recipes {
-  background: url('images/tasteful-recipes.jpg') center no-repeat;
+  background: url("images/tasteful-recipes.jpg") center no-repeat;
   background-size: cover;
 }
 
@@ -339,7 +340,7 @@ header {
 .image-group {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 1.5rem ;
+  gap: 1.5rem;
 }
 
 .discover-our-menu {
@@ -350,7 +351,7 @@ header {
 /*                           The Perfect Blend                       */
 
 .perfect-blend {
-  background: url('images/perfect-blend.jpg') center no-repeat;
+  background: url("images/perfect-blend.jpg") center no-repeat;
   background-size: cover;
 }
 
@@ -420,13 +421,13 @@ footer {
   font-size: 2rem;
   color: #fff;
   padding: 0.8rem 2rem;
-  opacity: .5;
-  transition: color .5s;
+  opacity: 0.5;
+  transition: color 0.5s;
 }
 
-.social-icons i:hover, 
+.social-icons i:hover,
 .social-icons i:focus {
-  color: var(--secondary-font-color)
+  color: var(--secondary-font-color);
 }
 
 .newsletter-form {
@@ -440,7 +441,7 @@ footer {
   width: 100%;
   max-width: 25rem;
   padding: 1rem;
-  border-radius: 0.4rem; 
+  border-radius: 0.4rem;
 }
 
 .newsletter-btn {
@@ -449,10 +450,124 @@ footer {
   color: var(--main-font-color-dark);
   cursor: pointer;
   font-size: 1.6rem;
-  padding: 1px .6rem;
+  padding: 1px 0.6rem;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   margin-left: 20.5rem;
 }
 
+/*                             MEDIA QUERIES                      */
+
+@media screen and (min-width: 900px) {
+  section {
+    padding: 7.9rem;
+  }
+
+  .menu-toggle {
+    display: none;
+  }
+
+  .nav {
+    justify-content: space-between;
+  }
+
+  .nav-list {
+    position: initial;
+    width: initial;
+    height: initial;
+    background-color: transparent;
+    padding: 0;
+    justify-content: initial;
+    flex-direction: row;
+    transform: initial;
+    transition: initial;
+  }
+
+  .nav-item {
+    margin: 0 2.4rem;
+    border: none;
+  }
+
+  /* .nav-item:last-child {
+    margin-right: 0;
+  } */
+
+  .nav-link {
+    font-size: 1.3rem;
+  }
+
+  .active {
+    position: relative;
+  }
+
+  .active::before {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    background-color: #fff;
+    left: 0;
+    bottom: -3px;
+  }
+
+  .sub-headline {
+    font-size: 10rem;
+  }
+
+  .first-letter {
+    font-size: 12.2rem;
+  }
+
+  .headline {
+    font-size: 4.7rem;
+    letter-spacing: 0.8rem;
+  }
+
+  .line {
+    max-width: 11.4rem;
+  }
+
+  .restaurant-info {
+    display: flex;
+    align-items: center;
+  }
+
+  .restaurant-info > div {
+    flex: 1;
+  }
+
+  .padding-right {
+    padding-right: 7rem;
+  }
+
+  .footer-content {
+    max-width: 77.5rem;
+    margin: auto;
+  }
+
+  .footer-content-about {
+    max-width: 51.3rem;
+    margin: 0 auto 5.4rem;
+  }
+
+  .footer-content-divider {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .social-media,
+  .newsletter-form {
+    width: 100%;
+    max-width: 27.3rem;
+    margin: 0 1rem;
+  }
+
+  .social-icons i {
+    opacity: 1;
+  }
+
+  .newsletter-btn {
+    margin-left: 17.5rem;
+  }
+}
