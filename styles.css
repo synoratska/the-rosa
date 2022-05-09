@@ -24,8 +24,13 @@ html {
   scroll-behavior: smooth;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 section {
   padding: 3.9rem 0;
+  overflow: hidden;
 }
 
 img {
@@ -166,6 +171,9 @@ header {
   font-weight: 100;
   line-height: 0.4;
   letter-spacing: 2px;
+  opacity: 0;
+  animation: fadeUp 0.5s forwards;
+  animation-delay: .5s;
 }
 
 .first-letter {
@@ -187,6 +195,8 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
+  animation: scale 0.5s forwards;
+ 
 }
 
 .line {
@@ -195,15 +205,21 @@ header {
   height: 0.25rem;
   background-color: #fff;
   position: relative;
+  opacity: 0;
+  animation: grow 2s forwards;
+  animation-delay: .9s;
 }
 
 .line-left::before,
 .line-right::before {
   content: "";
   position: absolute;
+  opacity: 0;
   top: 50%;
   transform: translateY(-50%);
   border: 0.6rem solid transparent;
+  animation: grow .5s forwards;
+  animation-delay: 1.2s;
 }
 
 .line-right::before {
@@ -220,6 +236,15 @@ header {
   font-size: 1.2rem;
   color: var(--secondary-font-color);
   margin: 0 1.6rem;
+  opacity: 0;
+  animation: spin .5s forwards;
+  animation-delay: .7s;
+}
+
+.single-animation {
+  opacity: 0;
+  animation: fadeUp 0.5s forwards;
+  animation-delay: 1.5s;
 }
 
 .headline-description h5 {
@@ -374,9 +399,6 @@ footer {
   left: 50%;
   transform: translateX(-50%);
   border-radius: 50%;
-  /* display: flex;
-  justify-content: center;
-  align-items: center; */
 }
 
 .back-to-top i {
@@ -384,10 +406,11 @@ footer {
   color: #fff;
   font-size: 2rem;
   padding: 2rem;
+  animation: up 2s infinite;
 }
 
 .footer-content {
-  /* overflow: hidden; */
+  overflow: hidden;
 }
 
 .footer-content h4 {
@@ -571,3 +594,73 @@ footer {
     margin-left: 17.5rem;
   }
 }
+
+/*                              Animations                          */
+
+@keyframes fadeUp {
+  0% {
+    transform: translateY(4rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scale {
+  0% {
+    transform: scale(2);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes grow {
+  0% {
+    width: 0;
+  }
+  100% {
+    opacity: 1;
+    width: 100%;
+  }
+}
+
+
+@keyframes spin {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    opacity: 1;
+    transform: rotate(-360deg);
+  }
+}
+
+
+@keyframes fadeDown {
+  0% {
+    transform: translateY(-1rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+@keyframes up {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(-1rem);
+  }
+}
+
