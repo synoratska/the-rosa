@@ -173,7 +173,7 @@ header {
   letter-spacing: 2px;
   opacity: 0;
   animation: fadeUp 0.5s forwards;
-  animation-delay: .5s;
+  animation-delay: 0.5s;
 }
 
 .first-letter {
@@ -196,7 +196,6 @@ header {
   align-items: center;
   justify-content: center;
   animation: scale 0.5s forwards;
- 
 }
 
 .line {
@@ -207,7 +206,7 @@ header {
   position: relative;
   opacity: 0;
   animation: grow 2s forwards;
-  animation-delay: .9s;
+  animation-delay: 0.9s;
 }
 
 .line-left::before,
@@ -218,7 +217,7 @@ header {
   top: 50%;
   transform: translateY(-50%);
   border: 0.6rem solid transparent;
-  animation: grow .5s forwards;
+  animation: grow 0.5s forwards;
   animation-delay: 1.2s;
 }
 
@@ -237,8 +236,8 @@ header {
   color: var(--secondary-font-color);
   margin: 0 1.6rem;
   opacity: 0;
-  animation: spin .5s forwards;
-  animation-delay: .7s;
+  animation: spin 0.5s forwards;
+  animation-delay: 0.7s;
 }
 
 .single-animation {
@@ -493,6 +492,7 @@ footer {
 
   .nav {
     justify-content: space-between;
+    margin-left: 4rem;
   }
 
   .nav-list {
@@ -511,10 +511,6 @@ footer {
     margin: 0 2.4rem;
     border: none;
   }
-
-  /* .nav-item:last-child {
-    margin-right: 0;
-  } */
 
   .nav-link {
     font-size: 1.3rem;
@@ -627,7 +623,6 @@ footer {
   }
 }
 
-
 @keyframes spin {
   0% {
     transform: rotate(0);
@@ -638,7 +633,6 @@ footer {
   }
 }
 
-
 @keyframes fadeDown {
   0% {
     transform: translateY(-1rem);
@@ -648,7 +642,6 @@ footer {
     transform: translateY(0);
   }
 }
-
 
 @keyframes up {
   0% {
@@ -663,4 +656,3 @@ footer {
     transform: translateY(-1rem);
   }
 }
-
