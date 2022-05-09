@@ -347,9 +347,11 @@ header {
   margin-bottom: 0;
 }
 
-/*                    The Perfect Blend               */
+/*                           The Perfect Blend                       */
 
 .perfect-blend {
   background: url('images/perfect-blend.jpg') center no-repeat;
   background-size: cover;
 }
+
+
